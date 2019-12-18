@@ -9,7 +9,7 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    MyCanvas myCanvas;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,5 +34,10 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.record);
             }
         });
+
+        MyCanvas myCanvas;
+        myCanvas = findViewById(R.id.display);
+
+        myCanvas.setBackgroundColor(0);
     }
 }

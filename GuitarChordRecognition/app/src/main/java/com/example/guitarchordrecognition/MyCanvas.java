@@ -8,7 +8,11 @@ import android.view.View;
 public class MyCanvas extends View {
     public MyCanvas(Context context){
         super(context);
-        Paint paint = new Paint();
+    }
+
+    @Override
+    public void setBackgroundColor(int color) {
+        super.setBackgroundColor(color);
     }
 
     @Override
