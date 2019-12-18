@@ -1,13 +1,15 @@
 package com.example.guitarchordrecognition;
 
+import android.graphics.Color;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    MyCanvas myCanvas;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,5 +25,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ImageButton record;
+        record = (ImageButton) findViewById(R.id.recordButton);
+
+        record.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                setContentView(R.layout.record);
+            }
+        });
     }
 }
